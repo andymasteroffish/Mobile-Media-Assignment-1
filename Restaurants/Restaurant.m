@@ -23,6 +23,8 @@
     float dinnerPrice = 0.0;
     float tip = 0.0;
     float taxes = 0.0;
+    
+    //use these if you want to do some more advanced things
     int numberOfAppetizersOrdered = 0;
     int numberOfDessertsOrdered = 0;
     int numberOfEntreesOrdered = 0;
