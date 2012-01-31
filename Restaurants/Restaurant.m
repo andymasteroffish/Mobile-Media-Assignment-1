@@ -14,7 +14,7 @@
     float dessertPrice = 5.50;
     float winePrice = 34.25;
     
-    int numberOfGuests = 4;
+    int numberOfGuests = 7;
     
     float taxRate = .0875;
     float tipRate = .2;
@@ -48,8 +48,9 @@
     //get the number of different food types orderred
     numberOfEntreesOrdered=numberOfGuests;
     numberOfDessertsOrdered=numberOfGuests;
-    numberOfAppetizersOrdered=numberOfGuests/2;
-    numberOfWineBottlesOrdered=numberOfGuests/4;
+    numberOfAppetizersOrdered=ceil((float)numberOfGuests/2.0);
+    numberOfWineBottlesOrdered=ceil((float)numberOfGuests/4.0);
+    NSLog(@"wine: %d. appetizers: %d", numberOfWineBottlesOrdered, numberOfAppetizersOrdered);
     
     //get the price for it all
     dinnerPrice=numberOfEntreesOrdered*entreePrice + numberOfAppetizersOrdered * appetizerPrice + numberOfDessertsOrdered * dessertPrice + numberOfWineBottlesOrdered*winePrice;
