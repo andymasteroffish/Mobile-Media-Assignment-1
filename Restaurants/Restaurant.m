@@ -31,6 +31,7 @@
     int numberOfWineBottlesOrdered = 0;
     
     
+    
     /* Set dinnerPrice to be the cost of:
         1 entree per person
         1 dessert per person
@@ -43,6 +44,17 @@
     // *********************   
     // Your code goes here
     // *********************
+    
+    //get the number of different food types orderred
+    numberOfEntreesOrdered=numberOfGuests;
+    numberOfDessertsOrdered=numberOfGuests;
+    numberOfAppetizersOrdered=numberOfGuests/2;
+    numberOfWineBottlesOrdered=numberOfGuests/4;
+    
+    //get the price for it all
+    dinnerPrice=numberOfEntreesOrdered*entreePrice + numberOfAppetizersOrdered * appetizerPrice + numberOfDessertsOrdered * dessertPrice + numberOfWineBottlesOrdered*winePrice;
+    taxes=taxRate*dinnerPrice;
+    tip=dinnerPrice*tipRate;
     
     
     // Print the dinner price
